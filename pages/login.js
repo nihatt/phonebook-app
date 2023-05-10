@@ -17,7 +17,7 @@ export default function Login({ navigation }) {
                 Alert.alert("Hatalı Giriş")
             }
             else{
-                if(users[indexOfUse].password ==password){
+                if(users[indexOfUse].password ==password && users[indexOfUse].isActive == true){
                     navigation.navigate("Home",{id:users[indexOfUse]._id})
                 }
                 else{
